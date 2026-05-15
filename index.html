@@ -1,92 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify Page Clone</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utility.css">
-</head>
-<body style="background-color: black;">
-      <div class="container">
-        <header class="flex justify-between">
-            <div class="logo flex align-center">
-              <i class="fa-brands fa-spotify"></i>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+  </head>
+  <body style="background-color: black">
+    <div class="container">
+      <header class="flex justify-between">
+        <div class="logo flex align-center">
+          <i class="fa-brands fa-spotify"></i>
+        </div>
+        <div class="menu flex align-center">
+          <div class="homeIcon">
+            <i
+              class="fa-solid fa-house"
+              style="color: white; font-size: 20px"
+            ></i>
+          </div>
+          <div class="search-box">
+            <input
+              type="text"
+              class="softer-dark-gray"
+              placeholder="What do you want to play?"
+            />
+            <i class="fa-solid fa-magnifying-glass" style="color: gray"></i>
+          </div>
+        </div>
+        <div class="login flex align-center" style="gap: 8px">
+          <a href="#" class="signup">Sign up</a>
+          <a href="#" class="loginButton">Login</a>
+        </div>
+      </header>
+      <div class="content">
+      <div class="left dark-background">
+        <div class="title flex justify-between align-center">
+          <p>Your Library</p>
+          <div class="create">
+            <i class="fa-solid fa-plus"></i>
+            <div class="side-box" hidden>
+              <ul style="width: 300px; padding: 0px 10px">
+                <li style="border-bottom: 1px solid #2f2e2e">
+                  <i class="fa-solid fa-music"></i>
+                  <span>
+                    <h4>Playlists</h4>
+                    <p>create a playlist with songs or episodes</p>
+                  </span>
+                </li>
+                <li style="border-bottom: 1px solid #2f2e2e">
+                  <i class="fa-solid fa-music"></i>
+                  <span>
+                    <h4>Playlists</h4>
+                    <p>create a playlist with songs or episodes</p>
+                  </span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-music"></i>
+                  <span>
+                    <h4>Playlists</h4>
+                    <p>create a playlist with songs or episodes</p>
+                  </span>
+                </li>
+              </ul>
             </div>
-            <div class="menu flex align-center">
-                <div class="homeIcon">
-                    <i class="fa-solid fa-house" style="color: white; font-size: 20px;"></i>
-                </div>
-                <div class="search-box">
-                 <input type="text" class="softer-dark-gray" placeholder="What do you want to play?">
-                 <i class="fa-solid fa-magnifying-glass" style="color: gray;"></i>
-                </div>
-            </div>
-            <div class="login flex align-center" style="gap: 5px;">
-                <a href="#" class="signup">Sign up</a>
-                <a href="#" class="loginButton">Login</a>
-            </div>
-        </header>
-       <div class="left dark-background">
-           <div class="title flex justify-between align-center">
-            <p>Your Library</p>
-            <div class="create">
-                <i class="fa-solid fa-plus"></i>
-                <div class="side-box" hidden>
-                    <ul style="width: 300px; padding: 0px 10px;">
-                        <li style="border-bottom: 1px solid #2f2e2e ;">
-                            <i class="fa-solid fa-music"></i>
-                            <span>
-                                <h4>Playlists</h4>
-                                <p>create a playlist with songs or episodes</p>
-                            </span>
-                        </li>
-                        <li style="border-bottom: 1px solid #2f2e2e ;">
-                            <i class="fa-solid fa-music"></i>
-                            <span>
-                                <h4>Playlists</h4>
-                                <p>create a playlist with songs or episodes</p>
-                            </span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-music"></i>
-                            <span>
-                                <h4>Playlists</h4>
-                                <p>create a playlist with songs or episodes</p>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-           </div>
-      <div class="card-1 softer-dark-gray">
-        <h4>Create your first playlist</h4>
-        <p>Its easy, we will help you.</p>
-        <button>Create playlist</button>
+          </div>
+        </div>
+        <div class="card-1 softer-dark-gray">
+          <h4>Create your first playlist</h4>
+          <p>Its easy, we will help you.</p>
+          <button>Create playlist</button>
 
-        <div hidden class="message" style="width: 250px; background-color: rgb(25, 88, 171);">
-        <h4>Create a playlist</h4>
-        <p>login or signup to create a new playlist</p>
-        <span style="display: flex; justify-content: flex-end; align-items: baseline; gap: 10px;">
-        <a href="#">Not Now</a>
-        <button>Login</button>
-        </span>
+          <div
+            hidden
+            class="message"
+            style="width: 250px; background-color: rgb(25, 88, 171)"
+          >
+            <h4>Create a playlist</h4>
+            <p>login or signup to create a new playlist</p>
+            <span
+              style="
+                display: flex;
+                justify-content: flex-end;
+                align-items: baseline;
+                gap: 10px;
+              "
+            >
+              <a href="#">Not Now</a>
+              <button>Login</button>
+            </span>
+          </div>
+        </div>
+        <div class="card-1 softer-dark-gray" style="margin-top: 6px">
+          <h4>Lets find some podcasts to follow</h4>
+          <p>We will keep you updated on new videos.</p>
+          <button>Browse podcasts</button>
+        </div>
+
+        <div class="footer-left">
+          <a href="#">legal</a>
+          <a href="#">safety and policy</a>
+          <a href="#">cookies</a>
+          <a href="#">About Ads</a>
+          <a href="#">Accessibility</a>
         </div>
       </div>
-
-
-
-
-       </div>
-       <div class="right"></div>
+      <div class="right">
+         <div class="title">
+            <h3>Trending songs</h3>
+            <div class="slide-wrapper">
+            <div class="slider">
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+            </div>
+            </div>
+         </div>
       </div>
-
-
-
-      
-
-
-
-</body>
+      </div>
+    </div>
+  </body>
 </html>
