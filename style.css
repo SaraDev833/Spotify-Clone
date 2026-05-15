@@ -28,6 +28,7 @@ header{
     border: 1px solid;
     color: gray;
     padding: 10px 60px;
+    width: 60%;
 }
 .search-box i {
     position: absolute;
@@ -70,16 +71,94 @@ header{
   
 }
 .create{
-    height: 30px;
-    width: 30px;
+    position: relative;
+}
+.create i{
+    height: 45px;
+    width: 45px;
+    font-size: 15px;
     border-radius: 100%;
-    background-color: #1F1F1F;
-    border: 1px solid #1F1F1F;
+    background-color: #2d2d2d;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
 }
+.create .side-box ul li{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    padding: 10px 0px;
+
+}
+.create .side-box{
+    background-color: #1F1F1F;
+    border-radius: 10px;
+    position: absolute;
+    left: 60px;
+    top: 10px;
+}
+.create .side-box ul li h4{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+.create .side-box ul li p{
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+}
+.card-1{
+    padding: 20px 10px;
+    border-radius: 25px;
+    margin-top: 40px;
+    position: relative;
+}
+.card-1 h4{
+    color: white;
+    font-size: 18px;
+    line-height: 35px;
+}
+.card-1 p{
+    color: white;
+    font-size: 12px;
+}
+.card-1 button{
+    padding: 5px 20px;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    border: 1px solid white;
+}
+.card-1 .message{
+    padding: 20px 10px;
+    border-radius: 15px;
+    position: absolute;
+    top: 0px;
+    left: 370px;
+  
+}
+.card-1 .message::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: -10px;
+    bottom: 30px;
+    background-color: rgb(25, 88, 171);
+    transform: rotate(45deg);
+}
+.card-1 .message a{
+    text-decoration: none;
+    text-align: end;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
 .right{
     width: 75vw;
 }
+
