@@ -1,0 +1,27 @@
+.dark-background{
+    background-color: #121212;
+}
+.card-section{
+    background-color: #181818;
+}
+.hover-sections{
+    background-color: #282828;
+}
+.softer-dark-gray{
+    background-color: #1F1F1F;
+}
+.flex{
+    display: flex;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-around{
+    justify-content: space-around;
+}
+.justify-evenly{
+    justify-content: space-evenly;
+}
+.align-center{
+    align-items: center;
+}
