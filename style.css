@@ -60,11 +60,12 @@ header {
   align-items: center;
 }
 .left {
-  height: 90vh;
+  height: 100vh;
   width: 25vw;
   padding: 20px 10px;
   border-radius: 25px;
   position: relative;
+  overflow: hidden;
 }
 
 .title p {
@@ -231,13 +232,13 @@ header {
 .cards .image {
   height: 140px;
   width: 105px;
-  object-fit: cover;
   display: flex;
   padding: 1px 20px;
 }
 .cards .image img {
   width: inherit;
   height: inherit;
+  object-fit: cover;
   border-radius: 8px;
 }
 .cards .image_detail h4 {
@@ -275,7 +276,7 @@ header {
 }
 /* artists section css */
 .slide_wrapper_singers {
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   overflow: hidden;
 }
 .slide_wrapper_singers .sliders {
@@ -299,6 +300,28 @@ header {
   padding: 0 10px;
   position: relative;
   z-index: 2;
+}
+.singer a{
+     position: absolute;
+  bottom: 65px;
+  right: 45px;
+  text-decoration: none;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  color: white;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+.singer a:hover{
+    transform: scale(0.8);
+}
+.singer:hover .singer_detail a{
+    opacity: 1;
 }
 .singer * {
   z-index: 2;

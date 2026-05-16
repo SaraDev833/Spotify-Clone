@@ -1,44 +1,36 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotify Page Clone</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="utility.css" />
-  </head>
-  <body style="background-color: black">
-    <div class="container">
-      <header class="flex justify-between">
-        <div class="logo flex align-center">
-          <i class="fa-brands fa-spotify"></i>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Page Clone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="utility.css" />
+</head>
+
+<body style="background-color: black">
+  <div class="container">
+    <header class="flex justify-between">
+      <div class="logo flex align-center">
+        <i class="fa-brands fa-spotify"></i>
+      </div>
+      <div class="menu flex align-center">
+        <div class="homeIcon">
+          <i class="fa-solid fa-house" style="color: white; font-size: 20px"></i>
         </div>
-        <div class="menu flex align-center">
-          <div class="homeIcon">
-            <i
-              class="fa-solid fa-house"
-              style="color: white; font-size: 20px"
-            ></i>
-          </div>
-          <div class="search-box">
-            <input
-              type="text"
-              class="softer-dark-gray"
-              placeholder="What do you want to play?"
-            />
-            <i class="fa-solid fa-magnifying-glass" style="color: gray"></i>
-          </div>
+        <div class="search-box">
+          <input type="text" class="softer-dark-gray" placeholder="What do you want to play?" />
+          <i class="fa-solid fa-magnifying-glass" style="color: gray"></i>
         </div>
-        <div class="login flex align-center" style="gap: 8px">
-          <a href="#" class="signup">Sign up</a>
-          <a href="#" class="loginButton">Login</a>
-        </div>
-      </header>
-      <div class="content">
+      </div>
+      <div class="login flex align-center" style="gap: 8px">
+        <a href="#" class="signup">Sign up</a>
+        <a href="#" class="loginButton">Login</a>
+      </div>
+    </header>
+    <div class="content">
       <div class="left dark-background">
         <div class="title flex justify-between align-center">
           <p>Your Library</p>
@@ -76,21 +68,15 @@
           <p>Its easy, we will help you.</p>
           <button>Create playlist</button>
 
-          <div
-            hidden
-            class="message"
-            style="width: 250px; background-color: rgb(25, 88, 171)"
-          >
+          <div hidden class="message" style="width: 250px; background-color: rgb(25, 88, 171)">
             <h4>Create a playlist</h4>
             <p>login or signup to create a new playlist</p>
-            <span
-              style="
+            <span style="
                 display: flex;
                 justify-content: flex-end;
                 align-items: baseline;
                 gap: 10px;
-              "
-            >
+              ">
               <a href="#">Not Now</a>
               <button>Login</button>
             </span>
@@ -111,148 +97,330 @@
         </div>
       </div>
       <div class="right">
-         <div class="title">
-            <h3>Trending songs</h3>
-         </div>
-            <div class="slide-wrapper">
-            <div class="slider">
-                <div class="cards">
-                  <div class="image">
-                 <img src="images/download.jfif" alt="kalank">
-                 </div>
-                 <div class="image_detail">
-                  <h4>Kalank Song</h4>
-                  <p>Arijit Singh</p>
-                  <a href="#">
-                    <i class="fa-solid fa-play"></i>
-                  </a>
-                 </div>
-                </div>
-                <div class="cards">
-                  <div class="image">
-                 <img src="images/Dil bechara  Sushant singh rajput.jfif" alt="kalank">
-                 </div>
-                 <div class="image_detail">
-                  <h4>Dil bechara</h4>
-                  <p>Arijit Singh</p>
-                  <a href="#">
-                    <i class="fa-solid fa-play"></i>
-                  </a>
-                 </div>
-                </div>
-                <div class="cards">
-                  <div class="image">
-                 <img src="images/Dunki (2023).jfif" alt="kalank">
-                 </div>
-                 <div class="image_detail">
-                  <h4>Dunki</h4>
-                  <p>Arijit Singh</p>
-                  <a href="#">
-                    <i class="fa-solid fa-play"></i>
-                  </a>
-                 </div>
-                </div>
-                <div class="cards">
-                  <div class="image">
-                 <img src="images/Fighter.jfif" alt="kalank">
-                 </div>
-                 <div class="image_detail">
-                  <h4>Fighter</h4>
-                  <p>Arijit Singh</p>
-                  <a href="#">
-                    <i class="fa-solid fa-play"></i>
-                  </a>
-                 </div>
-                </div>
-                <div class="cards">
-                  <div class="image">
-                 <img src="images/Kedarnath Movie Photo.jfif" alt="kalank">
-                 </div>
-                 <div class="image_detail">
-                  <h4>Kedarnath</h4>
-                  <p>Arijit Singh</p>
-                  <a href="#">
-                    <i class="fa-solid fa-play"></i>
-                  </a>
-                 </div>
-                </div>
-                <div class="cards">
-                  <div class="image">
-                 <img src="images/dhadak.jfif" alt="kalank">
-                 </div>
-                 <div class="image_detail">
-                  <h4>Dhadak</h4>
-                  <p>Arijit Singh</p>
-                  <a href="#">
-                    <i class="fa-solid fa-play"></i>
-                  </a>
-                 </div>
-                </div>
-                <div class="cards">
-                  <div class="image">
-                 <img src="images/Fighter.jfif" alt="kalank">
-                 </div>
-                 <div class="image_detail">
-                  <h4>Fighter</h4>
-                  <p>Arijit Singh</p>
-                  <a href="#">
-                    <i class="fa-solid fa-play"></i>
-                  </a>
-                 </div>
-                </div>
-                <div class="cards">
-                  <div class="image">
-                 <img src="images/Kedarnath Movie Photo.jfif" alt="kalank">
-                 </div>
-                 <div class="image_detail">
-                  <h4>Kedarnath</h4>
-                  <p>Arijit Singh</p>
-                  <a href="#">
-                    <i class="fa-solid fa-play"></i>
-                  </a>
-                 </div>
-                </div>
-                <div class="cards">
-                  <div class="image">
-                 <img src="images/dhadak.jfif" alt="kalank">
-                 </div>
-                 <div class="image_detail">
-                  <h4>Dhadak</h4>
-                  <p>Arijit Singh</p>
-                  <a href="#">
-                    <i class="fa-solid fa-play"></i>
-                  </a>
-                 </div>
-                </div>
-              
-            </div>
-            </div>
-            <!-- singers section -->
-             <div class="title" style="margin-top: 30px;">
-            <h3 >Popular Artists</h3>
-         </div>
-             <div class="slide_wrapper_singers">
-              <div class="sliders">
-                    <div class="singer">
-                      
-                        <img src="images/Atif Aslam.jfif" alt="">
-                        <div class="singer_detail">
-                          <h4>Pritam hassan</h4>
-                          <p>Artist</p>
-                        </div>
-                      
-                    </div>
-                    <div class="singer"></div>
-                    <div class="singer"></div>
-                    <div class="singer"></div>
-                    <div class="singer"></div>
-                    <div class="singer"></div>
-               
+        <div class="title">
+          <h3>Trending songs</h3>
+        </div>
+        <div class="slide-wrapper">
+          <div class="slider">
+            <div class="cards">
+              <div class="image">
+                <img src="images/kalank.jfif" alt="kalank">
               </div>
-             </div>
-         </div>
-      </div>
+              <div class="image_detail">
+                <h4>Kalank Song</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="image">
+                <img src="images/Dil bechara  Sushant singh rajput.jfif" alt="kalank">
+              </div>
+              <div class="image_detail">
+                <h4>Dil bechara</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="image">
+                <img src="images/Dunki (2023).jfif" alt="kalank">
+              </div>
+              <div class="image_detail">
+                <h4>Dunki</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="image">
+                <img src="images/Fighter.jfif" alt="kalank">
+              </div>
+              <div class="image_detail">
+                <h4>Fighter</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="image">
+                <img src="images/Kedarnath Movie Photo.jfif" alt="kalank">
+              </div>
+              <div class="image_detail">
+                <h4>Kedarnath</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="image">
+                <img src="images/dhadak.jfif" alt="kalank">
+              </div>
+              <div class="image_detail">
+                <h4>Dhadak</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="image">
+                <img src="images/Fighter.jfif" alt="kalank">
+              </div>
+              <div class="image_detail">
+                <h4>Fighter</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="image">
+                <img src="images/Kedarnath Movie Photo.jfif" alt="kalank">
+              </div>
+              <div class="image_detail">
+                <h4>Kedarnath</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="image">
+                <img src="images/dhadak.jfif" alt="kalank">
+              </div>
+              <div class="image_detail">
+                <h4>Dhadak</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- singers section -->
+        <div class="title" style="margin-top: 30px;">
+          <h3>Popular Artists</h3>
+        </div>
+        <div class="slide_wrapper_singers">
+          <div class="sliders">
+            <div class="singer">
+              <img src="images/Atif Aslam.jfif" alt="">
+              <div class="singer_detail">
+                <h4>Pritam hassan</h4>
+                <p>Artist</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+
+            </div>
+            <div class="singer">
+              <img src="images/IMRAN.jfif" alt="">
+              <div class="singer_detail">
+                <h4>Pritam hassan</h4>
+                <p>Artist</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+
+            </div>
+            <div class="singer">
+              <img src="images/Pritam sir ☺️.jfif" alt="">
+              <div class="singer_detail">
+                <h4>Pritam hassan</h4>
+                <p>Artist</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+
+            </div>
+            <div class="singer">
+              <img src="images/download (1).jfif" alt="">
+              <div class="singer_detail">
+                <h4>Pritam hassan</h4>
+                <p>Artist</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+
+            </div>
+            <div class="singer">
+              <img src="images/arijit.jfif" alt="">
+              <div class="singer_detail">
+                <h4>Pritam hassan</h4>
+                <p>Artist</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+
+            </div>
+            <div class="singer">
+              <img src="images/Pritam sir ☺️.jfif" alt="">
+              <div class="singer_detail">
+                <h4>Pritam hassan</h4>
+                <p>Artist</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+
+            </div>
+            <div class="singer">
+              <img src="images/download (1).jfif" alt="">
+              <div class="singer_detail">
+                <h4>Pritam hassan</h4>
+                <p>Artist</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+
+            </div>
+            <div class="singer">
+              <img src="images/arijit.jfif" alt="">
+              <div class="singer_detail">
+                <h4>Pritam hassan</h4>
+                <p>Artist</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+        <!-- popular albums and songs -->
+                <div class="title">
+          <h3>Popular albums and songs</h3>
+        </div>
+        <div class="slide-wrapper">
+          <div class="slider">
+            <div class="cards">
+              <div class="image">
+                <img src="images/lalaa.jfif" alt="kalank">
+              </div>
+              <div class="image_detail">
+                <h4>Kalank Song</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="image">
+                <img src="images/Antoine Fuqua’s Michael Jackson Biopic Gets a Big___.jfif" alt="kalank">
+              </div>
+              <div class="image_detail">
+                <h4>Dil bechara</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="image">
+                <img src="images/Fonts in Popular Culture Identified Vol_ 3  · Typewolf.jfif" alt="kalank">
+              </div>
+              <div class="image_detail">
+                <h4>Dunki</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="image">
+                <img src="images/Universal Music Distribution Lana Del Rey - Born to Die (Vinyl).jfif" alt="kalank">
+              </div>
+              <div class="image_detail">
+                <h4>Fighter</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="image">
+                <img src="images/lalaa.jfif" alt="kalank">
+              </div>
+              <div class="image_detail">
+                <h4>Kedarnath</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="image">
+                <img src="images/Universal Music Distribution Lana Del Rey - Born to Die (Vinyl).jfif" alt="kalank">
+              </div>
+              <div class="image_detail">
+                <h4>Dhadak</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="image">
+                <img src="images/Antoine Fuqua’s Michael Jackson Biopic Gets a Big___.jfif" alt="kalank">
+              </div>
+              <div class="image_detail">
+                <h4>Fighter</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="image">
+                <img src="images/Fonts in Popular Culture Identified Vol_ 3  · Typewolf.jfif" alt="kalank">
+              </div>
+              <div class="image_detail">
+                <h4>Kedarnath</h4>
+                <p>Arijit Singh</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+          
+
+          </div>
+        </div>
       </div>
     </div>
-  </body>
+  </div>
+  </div>
+</body>
+
 </html>
