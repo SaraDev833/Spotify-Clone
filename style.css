@@ -389,3 +389,33 @@ header {
   font-size: 12px;
   color: gray;
 }
+
+
+/* popup */
+.popup{
+  height: 350px;
+  width: 550px;
+  background: linear-gradient(
+    to bottom,
+    #2d2d2d 0%,
+    #1f1f1f 35%,
+    #121212 100%
+  );
+  position: fixed;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+.popup .popup_left {
+  width: 50%;
+  height: 100%;
+  background-color: gray;
+}
+ .popup .close_button{
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  height: 30px;
+  
+ }

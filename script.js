@@ -1,44 +1,38 @@
 const available_keywords = [
-    'kalank',
-    'kedarnath',
-    'fighter',
-    'dhadak',
-    'dil bechara',
-    'dunki'
-]
+  "kalank",
+  "kedarnath",
+  "fighter",
+  "dhadak",
+  "dil bechara",
+  "dunki",
+];
 const input = document.getElementById("input");
-const resultBox = document.querySelector('.resultBox');
+const resultBox = document.querySelector(".resultBox");
 
-
-input.addEventListener('keyup',function () {
-    let result = [];
-    let inputValue = input.value;
-    if (inputValue.length) {
-      result = available_keywords.filter((keyword => {
-            return keyword.toLowerCase().includes(inputValue)
-        }))
-    }
-    display(result);
-   
-})
+input.addEventListener("keyup", function () {
+  let result = [];
+  let inputValue = input.value;
+  if (inputValue.length) {
+    result = available_keywords.filter((keyword) => {
+      return keyword.toLowerCase().includes(inputValue);
+    });
+  }
+  display(result);
+});
 
 function display(result) {
-    
-    const content = result.map((item => {
-       
-        return "<li onclick = selectItem(this)>" + item + "</li>";
-        
-    })).join("")
-    
+  const content = result
+    .map((item) => {
+      return "<li onclick = selectItem(this)>" + item + "</li>";
+    })
+    .join("");
 
-    resultBox.innerHTML = "<ul>" + content + "</ul>"
-  
+  resultBox.innerHTML = "<ul>" + content + "</ul>";
 }
- 
+
 function selectItem(list) {
-    input.value = list.innerHTML;
+  input.value = list.innerHTML;
 }
-
 
 // songs display
 
@@ -61,45 +55,39 @@ const songs = [
     artist: "Arijit Singh",
     img: "images/Dunki (2023).jfif",
   },
-  
 ];
 
-
-const slider = document.querySelector('.slider');
+const slider = document.querySelector(".slider");
 
 function renderSongs(data) {
-    slider.innerHTML = "";
-    data.forEach(song => {
-      
-        slider.innerHTML += `
+  slider.innerHTML = "";
+
+  data.forEach((song) => {
+    slider.innerHTML += `
                 <div class="cards">
-              <div class="image">
-                <img src="${song.img}" alt="kalank">
-              </div>
-              <div class="image_detail">
-                <h4>"${song.title}"</h4>
-                <p>"${song.artist}"</p>
-                <a href="#">
-                  <i class="fa-solid fa-play"></i>
-                </a>
-              </div>
-            </div>
+               <div class="image">
+                 <img src="${song.img}" alt="kalank">
+               </div>
+               <div class="image_detail">
+                 <h4>"${song.title}"</h4>
+                 <p>"${song.artist}"</p>
+                 <a href="#">
+                   <i class="fa-solid fa-play"></i>
+                 </a>
+               </div>
+             </div>
         `;
-    });
-
+  });
 }
-
 renderSongs(songs);
-// filtered songs
 
 input.addEventListener("keyup", function () {
-    let filtered = [];
-    let input_value = input.value.toLowerCase();
-    if (input_value.length) {
-        filtered = songs.filter(song => {
-          return  song.title.toLowerCase().includes(input_value)
-        })
-    }
-    renderSongs(filtered)
-     
+  let filtered = [];
+  let input_value = input.value.toLowerCase();
+  if (input_value.length) {
+    filtered = songs.filter((song) => {
+      return song.title.toLowerCase().includes(input_value);
+    });
+  }
+  renderSongs(filtered);
 });
