@@ -101,18 +101,26 @@
       </div>
       <div class="right">
             <!-- now  todays homework is making a popup/modal -->
-             <!-- <div class="popup">
-               <a href="#" onclick="close()" class="close_button">X</a>
+             <div class="popup ">
+               <a active href="#" onclick="closePop()" class="close_button ">X</a>
               <div class="popup_left">
-                         <img id="popup_img" alt="">
+                         <img id="popup_img" alt="" src="">
               </div>
               <div class="popup_right">
-                <h2>Start listening with your free spotify account</h2>
-                 <button id="sign_up">signup for free</button>
-                 <button id="signup">Download app</button>
+                <h2 style="text-align: center; font-size: 20px;">Start listening with your free spotify account</h2>
+                <div class="buttons">
+                    <button id="sign_up" onclick="signPop(this)">signup for free</button>or
+                     <span class="not_available hidden">Sorry! no signup available now.</span>
+                 <button id="download" onclick="downloadd(this)">Download app</button>
+                  <span class="not_available hidden">Sorry download option is not available</span>
+                 <p>Already have an account? <a href="#" onclick="loginPop(this)">Login</a>
+                                   <span style="text-align: center;" class="not_available hidden">Sorry no login feature is available!</span></p>
+
+                </div>
+               
                 
               </div>
-             </div> -->
+             </div>
         <div class="title">
           <h3>Trending songs</h3>
         </div>

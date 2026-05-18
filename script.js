@@ -72,7 +72,7 @@ function renderSongs(data) {
                  <h4>"${song.title}"</h4>
                  <p>"${song.artist}"</p>
                  <a href="#">
-                   <i class="fa-solid fa-play"></i>
+                   <i class="fa-solid fa-play" onclick="openPop('${song.img}')"></i>
                  </a>
                </div>
              </div>
@@ -91,3 +91,31 @@ input.addEventListener("keyup", function () {
   }
   renderSongs(filtered);
 });
+
+// popupjs
+
+function closePop() {
+  document.querySelector(".popup").classList.remove("active");
+}
+function openPop(img) {
+
+  document.getElementById("popup_img").src = img;
+  document.querySelector(".popup").classList.add("active");
+}
+
+function signPop(btn) {
+  const message = btn.nextElementSibling;
+  console.log(message)
+  message.classList.remove("hidden");
+  
+}
+function downloadd(btn) {
+
+    const message = btn.nextElementSibling;
+    message.classList.remove("hidden");
+}
+function loginPop(btn) {
+    const message = btn.nextElementSibling;
+    message.classList.remove("hidden");
+}
+
