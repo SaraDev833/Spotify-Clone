@@ -43,29 +43,29 @@ header {
   font-size: medium;
 }
 
-.resultBox{
+.resultBox {
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
   z-index: 10;
 }
-.resultBox ul{
+.resultBox ul {
   border-radius: 20px;
   background-color: #181818;
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.resultBox ul li{
+.resultBox ul li {
   padding: 10px 15px;
   background: #181818;
-  border-bottom: 1px solid #121212 ;
+  border-bottom: 1px solid #121212;
   color: white;
   cursor: pointer;
   transition: 0.2s ease;
 }
-.resultBox ul li:hover{
+.resultBox ul li:hover {
   background-color: #2d2d2d;
 }
 .signup {
@@ -329,8 +329,8 @@ header {
   position: relative;
   z-index: 2;
 }
-.singer a{
-     position: absolute;
+.singer a {
+  position: absolute;
   bottom: 65px;
   right: 45px;
   text-decoration: none;
@@ -345,11 +345,11 @@ header {
   opacity: 0;
   transition: 0.4s ease-in-out;
 }
-.singer a:hover{
-    transform: scale(0.8);
+.singer a:hover {
+  transform: scale(0.8);
 }
-.singer:hover .singer_detail a{
-    opacity: 1;
+.singer:hover .singer_detail a {
+  opacity: 1;
 }
 .singer * {
   z-index: 2;
@@ -390,22 +390,16 @@ header {
   color: gray;
 }
 
-
 /* popup */
-.popup{
+.popup {
   height: 350px;
   width: 550px;
-  background: linear-gradient(
-    to bottom,
-    #2d2d2d 0%,
-    #1f1f1f 35%,
-    #121212 100%
-  );
+  background: linear-gradient(to bottom, #2d2d2d 0%, #1f1f1f 35%, #121212 100%);
   position: fixed;
   z-index: 20;
   top: 50%;
   left: 50%;
-  transform: translate(-50% , -50%);
+  transform: translate(-50%, -50%);
   display: flex;
   visibility: hidden;
 }
@@ -419,64 +413,84 @@ header {
   height: 100%;
   background-color: gray;
 }
- .popup .close_button{
+.popup .close_button {
   position: absolute;
   right: 10px;
   top: 20px;
   font-size: 20px;
   text-decoration: none;
   color: white;
- }
- .popup.active{
+}
+.popup.active {
   opacity: 1;
   visibility: visible;
- }
- .popup_right{
+}
+.popup_right {
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0px 20px;
- }
- .popup_right .buttons #sign_up{
+}
+.popup_right .buttons #sign_up {
   background-color: green;
   color: white;
   padding: 10px 20px;
   border-radius: 25px;
   border: none;
- }
- .popup_right span{
-     color: rgb(118, 52, 52);
-     font-size: 10px;
-     font-weight: bold;
- }
- .popup_right .hidden{
-   display: none;
-  
- }
-  .popup_right .buttons{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-  }
- .popup_right .buttons #download{
+}
+.popup_right span {
+  color: rgb(118, 52, 52);
+  font-size: 10px;
+  font-weight: bold;
+}
+.hidden {
+  display: none;
+}
+.popup_right .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.popup_right .buttons #download {
   background-color: transparent;
   color: white;
   padding: 10px 20px;
   border-radius: 25px;
   border: 1px solid white;
- }
+}
 
-  .popup_right .buttons p{
-    font-size: 12px;
-    color: gray;
-    margin-top: 25px;
-  }
-  .popup_right .buttons a{
-    text-decoration: none;
-    color: white;
-  }
+.popup_right .buttons p {
+  font-size: 12px;
+  color: gray;
+  margin-top: 25px;
+}
+.popup_right .buttons a {
+  text-decoration: none;
+  color: white;
+}
+/* css for toast */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background: white;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 25px;
+  z-index: 10;
+  transform: translateX(150%);
+  opacity: 0;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(0);
+}

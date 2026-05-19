@@ -98,24 +98,36 @@ function closePop() {
   document.querySelector(".popup").classList.remove("active");
 }
 function openPop(img) {
-
   document.getElementById("popup_img").src = img;
   document.querySelector(".popup").classList.add("active");
 }
 
 function signPop(btn) {
   const message = btn.nextElementSibling;
-  console.log(message)
+  console.log(message);
   message.classList.remove("hidden");
-  
 }
 function downloadd(btn) {
-
-    const message = btn.nextElementSibling;
-    message.classList.remove("hidden");
+  const message = btn.nextElementSibling;
+  message.classList.remove("hidden");
 }
 function loginPop(btn) {
-    const message = btn.nextElementSibling;
-    message.classList.remove("hidden");
+  const message = btn.nextElementSibling;
+  message.classList.remove("hidden");
 }
 
+// toast js
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.style.fontWeight = "bold";
+  toast.style.fontSize = "12px";
+  toast.innerText = message;
+  toast.classList.remove("hidden");
+  toast.classList.add("show");
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => {
+      toast.classList.add("hidden");
+    }, 3000);
+  }, 2500);
+}
