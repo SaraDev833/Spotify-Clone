@@ -39,8 +39,8 @@
         <div class="title flex justify-between align-center">
           <p>Your Library</p>
           <div class="create">
-            <i onclick="toggleEvent(event)"  class="fa-solid fa-plus" id="icon"></i>
-            <div class="side-box" >
+            <i  onclick="toggleEvent(event)"  class="fa-solid fa-plus" id="icon"></i>
+            <div class="side-box hidden" >
               <ul style="width: 300px; padding: 0px 10px">
                 <li style="border-bottom: 1px solid #2f2e2e">
                   <i class="fa-solid fa-music"></i>
@@ -70,9 +70,9 @@
         <div class="card-1 softer-dark-gray">
           <h4>Create your first playlist</h4>
           <p>Its easy, we will help you.</p>
-          <button>Create playlist</button>
+          <button style="cursor: pointer;" onclick="togglePlay(event)" id="play">Create playlist</button>
 
-          <div hidden class="message" style="width: 250px; background-color: rgb(25, 88, 171)">
+          <div  class="message hidden" style="width: 250px; background-color: rgb(25, 88, 171); z-index: 9999;">
             <h4>Create a playlist</h4>
             <p>login or signup to create a new playlist</p>
             <span style="
@@ -81,15 +81,15 @@
                 align-items: baseline;
                 gap: 10px;
               ">
-              <a href="#">Not Now</a>
-              <button>Login</button>
+              <a href="#"  onclick="togglePlay(event)">Not Now</a>
+              <button onclick="showToast('login feature is not available!')">Login</button>
             </span>
           </div>
         </div>
         <div class="card-1 softer-dark-gray" style="margin-top: 6px">
           <h4>Lets find some podcasts to follow</h4>
           <p>We will keep you updated on new videos.</p>
-          <button>Browse podcasts</button>
+          <button style="cursor: pointer;" onclick="showToast('sorry!it is an one page website!')">Browse podcasts</button>
         </div>
 
         <div class="footer-left">
@@ -245,40 +245,7 @@
         <div class="slide_wrapper_singers">
           <div class="sliders">
             <div class="singer">
-              <img src="images/Atif Aslam.jfif" alt="">
-              <div class="singer_detail">
-                <h4>Pritam hassan</h4>
-                <p>Artist</p>
-                <a href="#">
-                  <i class="fa-solid fa-play"></i>
-                </a>
-              </div>
-
-            </div>
-            <div class="singer">
-              <img src="images/IMRAN.jfif" alt="">
-              <div class="singer_detail">
-                <h4>Pritam hassan</h4>
-                <p>Artist</p>
-                <a href="#">
-                  <i class="fa-solid fa-play"></i>
-                </a>
-              </div>
-
-            </div>
-            <div class="singer">
-              <img src="images/Pritam sir ☺️.jfif" alt="">
-              <div class="singer_detail">
-                <h4>Pritam hassan</h4>
-                <p>Artist</p>
-                <a href="#">
-                  <i class="fa-solid fa-play"></i>
-                </a>
-              </div>
-
-            </div>
-            <div class="singer">
-              <img src="images/download (1).jfif" alt="">
+              <img src="images/atif.jfif" alt="">
               <div class="singer_detail">
                 <h4>Pritam hassan</h4>
                 <p>Artist</p>
@@ -300,7 +267,7 @@
 
             </div>
             <div class="singer">
-              <img src="images/Pritam sir ☺️.jfif" alt="">
+              <img src="images/pritam.jfif" alt="">
               <div class="singer_detail">
                 <h4>Pritam hassan</h4>
                 <p>Artist</p>
@@ -311,7 +278,40 @@
 
             </div>
             <div class="singer">
-              <img src="images/download (1).jfif" alt="">
+              <img src="images/sanam.jfif" alt="">
+              <div class="singer_detail">
+                <h4>Pritam hassan</h4>
+                <p>Artist</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+
+            </div>
+            <div class="singer">
+              <img src="images/arijit.jfif" alt="">
+              <div class="singer_detail">
+                <h4>Pritam hassan</h4>
+                <p>Artist</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+
+            </div>
+            <div class="singer">
+              <img src="images/Pritam.jfif" alt="">
+              <div class="singer_detail">
+                <h4>Pritam hassan</h4>
+                <p>Artist</p>
+                <a href="#">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+
+            </div>
+            <div class="singer">
+              <img src="images/sanam.jfif" alt="">
               <div class="singer_detail">
                 <h4>Pritam hassan</h4>
                 <p>Artist</p>

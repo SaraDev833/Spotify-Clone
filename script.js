@@ -1,3 +1,12 @@
+const available_singers = [
+  { name: "Pritam", img: "images/pritam.jff" },
+  { name: "Arijit Singh", img: "images/arijit.jff" },
+  { name: "Selena Gomez", img: "images/selena.jff" },
+  { name: "Billie Eplish", img: "images/eilish.jff" },
+  { name: "Sanam Puri", img: "images/sanam.jff" },
+  { name: "Imran Hassan", img: "images/IMRAN.jff" },
+  { name: "Zain Malik", img: "images/zain.jff" },
+];
 const available_keywords = [
   "kalank",
   "kedarnath",
@@ -5,6 +14,7 @@ const available_keywords = [
   "dhadak",
   "dil bechara",
   "dunki",
+  
 ];
 const input = document.getElementById("input");
 const resultBox = document.querySelector(".resultBox");
@@ -17,6 +27,7 @@ input.addEventListener("keyup", function () {
       return keyword.toLowerCase().includes(inputValue);
     });
   }
+ 
   display(result);
 });
 
@@ -33,6 +44,10 @@ function display(result) {
 function selectItem(list) {
   input.value = list.innerHTML;
 }
+
+//singers display
+
+
 
 // songs display
 
@@ -138,25 +153,33 @@ function showToast(message) {
 const sideBox = document.querySelector('.side-box');
 const icon = document.getElementById('icon')
 function toggleEvent(event) {
-  event.stopPropagation(); 
+ sideBox.classList.toggle("hidden");
   if (!sideBox.classList.contains('hidden')) {
-      icon.style.transform = "rotate(90deg)";
+      icon.style.transform = "rotate(45deg)";
       icon.style.transition = "0.4s ease";
   } else {
-     icon.style.transform = "rotate(45deg)";
-     icon.style.transition = "0.4s ease";
-  }
-    sideBox.classList.toggle("hidden");
-}
-document.addEventListener('click', function (e) {
-  if (!sideBox.contains(e.target) && !sideBox.classList.contains("hidden")) {
-    sideBox.classList.add('hidden');
-     icon.style.transform = "rotate(90deg)";
+     icon.style.transform = "rotate(0)";
      icon.style.transition = "0.4s ease";
   }
     
-   else {
-     icon.style.transform = "rotate(45deg)";
-     icon.style.transition = "0.4s ease";
-   }
+}
+document.addEventListener('click', function (e) {
+ if (!sideBox.contains(e.target) && !icon.contains(e.target)) {
+   sideBox.classList.add("hidden");
+   icon.style.transform = "rotate(0deg)";
+ }
 })
+
+//for create playlist
+const play = document.getElementById('play');
+const message = document.querySelector('.message')
+function togglePlay(event) {
+  event.stopPropagation();
+  message.classList.toggle('hidden');
+}
+document.addEventListener('click', function (e) {
+  if (!message.contains(e.target)) {
+    message.classList.add('hidden');
+    }
+})
+  
