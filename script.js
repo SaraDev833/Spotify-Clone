@@ -131,3 +131,32 @@ function showToast(message) {
     }, 3000);
   }, 2500);
 }
+
+// toggle
+
+
+const sideBox = document.querySelector('.side-box');
+const icon = document.getElementById('icon')
+function toggleEvent(event) {
+  event.stopPropagation(); 
+  if (!sideBox.classList.contains('hidden')) {
+      icon.style.transform = "rotate(90deg)";
+      icon.style.transition = "0.4s ease";
+  } else {
+     icon.style.transform = "rotate(45deg)";
+     icon.style.transition = "0.4s ease";
+  }
+    sideBox.classList.toggle("hidden");
+}
+document.addEventListener('click', function (e) {
+  if (!sideBox.contains(e.target) && !sideBox.classList.contains("hidden")) {
+    sideBox.classList.add('hidden');
+     icon.style.transform = "rotate(90deg)";
+     icon.style.transition = "0.4s ease";
+  }
+    
+   else {
+     icon.style.transform = "rotate(45deg)";
+     icon.style.transition = "0.4s ease";
+   }
+})

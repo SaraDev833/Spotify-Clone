@@ -93,7 +93,7 @@ header {
   padding: 20px 10px;
   border-radius: 25px;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .title p {
@@ -122,12 +122,13 @@ header {
   align-items: center;
   padding: 10px 0px;
 }
-.create .side-box {
+ .create .side-box {
   background-color: #1f1f1f;
   border-radius: 10px;
   position: absolute;
   left: 60px;
   top: 10px;
+  z-index: 9999;
 }
 .create .side-box ul li h4 {
   font-size: 18px;
@@ -138,7 +139,7 @@ header {
   font-size: 12px;
   font-weight: bold;
   color: gray;
-}
+} 
 .card-1 {
   padding: 20px 10px;
   border-radius: 25px;
