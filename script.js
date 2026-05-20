@@ -20,25 +20,40 @@ const input = document.getElementById("input");
 const resultBox = document.querySelector(".resultBox");
 
 input.addEventListener("keyup", function () {
-  let result = [];
-  let inputValue = input.value;
-  if (inputValue.length) {
-    result = available_keywords.filter((keyword) => {
+  
+  let inputValue = input.value.toLowerCase();
+ 
+    
+    let keywordResult = available_keywords.filter((keyword) => {
       return keyword.toLowerCase().includes(inputValue);
     });
-  }
+  
+
+    let singerResult = available_singers.filter(singer => {
+      return singer.name.toLowerCase().includes(inputValue);
+    })
+  
  
-  display(result);
+  display(keywordResult , singerResult)
 });
 
-function display(result) {
-  const content = result
-    .map((item) => {
-      return "<li onclick = selectItem(this)>" + item + "</li>";
-    })
-    .join("");
+function display(keywords,singerss) {
+  
+     let keywordHtml = keywords.map((item) => {
+         return "<li onclick = selectItem(this)>" + item + "</li>";
+       })
+       .join("");
 
-  resultBox.innerHTML = "<ul>" + content + "</ul>";
+  let singerHtml = singerss.map(singer => {
+    console.log("<li>" + singer.name + "</li>");
+    return "<li>" + singer.name + "</li>";
+  }).join();
+  resultBox.innerHTML = `
+    <ul>
+      ${keywordHtml}
+      ${singerHtml}
+    </ul>
+  `;
 }
 
 function selectItem(list) {
