@@ -45,8 +45,8 @@ function display(keywords,singerss) {
        .join("");
 
   let singerHtml = singerss.map(singer => {
-    console.log("<li>" + singer.name + "</li>");
-    return "<li>" + singer.name + "</li>";
+   
+    return "<li onclick=selectItem(this)>" + singer.name + "</li>";
   }).join();
   resultBox.innerHTML = `
     <ul>
@@ -57,6 +57,7 @@ function display(keywords,singerss) {
 }
 
 function selectItem(list) {
+
   input.value = list.innerHTML;
 }
 
