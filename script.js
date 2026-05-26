@@ -1,11 +1,11 @@
 const available_singers = [
-  { name: "Pritam", img: "images/pritam.jff" },
-  { name: "Arijit Singh", img: "images/arijit.jff" },
-  { name: "Selena Gomez", img: "images/selena.jff" },
-  { name: "Billie Eplish", img: "images/eilish.jff" },
-  { name: "Sanam Puri", img: "images/sanam.jff" },
-  { name: "Imran Hassan", img: "images/IMRAN.jff" },
-  { name: "Zain Malik", img: "images/zain.jff" },
+  { name: "Pritam", img: "images/pritam.jfif" },
+  { name: "Arijit Singh", img: "images/arijit.jfif" },
+  { name: "Selena Gomez", img: "images/selena.jfif" },
+  { name: "Billie Eplish", img: "images/eilish.jfif" },
+  { name: "Sanam Puri", img: "images/sanam.jfif" },
+  { name: "Imran Hassan", img: "images/IMRAN.jfif" },
+  { name: "Zain Malik", img: "images/zain.jfif" },
 ];
 const available_keywords = [
   "kalank",
@@ -122,6 +122,37 @@ input.addEventListener("keyup", function () {
   }
   renderSongs(filtered);
 });
+
+// render singers
+const sliders = document.querySelector('.sliders');
+
+function renderSingers(available_singers){
+  sliders.innerHTML = '';
+  available_singers.forEach((singer) => {
+       sliders.innerHTML += `<div class="singer">
+              <img src="${singer.img}" alt="">
+              <div class="singer_detail">
+                <h4>${singer.name}</h4>
+                <p>Artist</p>
+                <a href="#">
+                  <i class="fa-solid fa-play" onclick="openPop('${singer.img}')"></i>
+                </a>
+              </div>
+
+            </div>`;
+  })
+}
+renderSingers(available_singers);
+
+input.addEventListener('keyup', function() {
+  let filtered_singers = [];
+  let input_value = input.value.toLowerCase();
+  filtered_singers = available_singers.filter((singer) => {
+    return singer.name.toLowerCase().includes(input_value);
+  });
+  
+  renderSingers(filtered_singers);
+})
 
 // popupjs
 
