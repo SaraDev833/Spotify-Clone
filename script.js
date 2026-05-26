@@ -111,16 +111,27 @@ function renderSongs(data) {
   });
 }
 renderSongs(songs);
+const songTitle = document.getElementById('song_title');
+const right = document.querySelector('.right');
 
 input.addEventListener("keyup", function () {
   let filtered = [];
   let input_value = input.value.toLowerCase();
-  if (input_value.length) {
+  if (input_value === "") {
+    renderSongs(songs);
+    return;
+  }
     filtered = songs.filter((song) => {
       return song.title.toLowerCase().includes(input_value);
     });
-  }
-  renderSongs(filtered);
+  
+  if (filtered.length > 0) {
+     renderSongs(filtered);
+  } else {
+    
+    renderSongs([]);
+   
+   }
 });
 
 // render singers
@@ -147,11 +158,19 @@ renderSingers(available_singers);
 input.addEventListener('keyup', function() {
   let filtered_singers = [];
   let input_value = input.value.toLowerCase();
+  if (input_value === "") {
+    renderSingers(available_singers);
+    return;
+  }
   filtered_singers = available_singers.filter((singer) => {
     return singer.name.toLowerCase().includes(input_value);
   });
+  if (filtered_singers.length > 0) {
+    renderSingers(filtered_singers);
+  } else {
+    renderSingers([]);
+  }
   
-  renderSingers(filtered_singers);
 })
 
 // popupjs

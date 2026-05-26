@@ -216,6 +216,10 @@ header {
   font-size: 20px;
   font-weight: bold;
 }
+.right p{
+  font-size: 20px;
+  font-weight: bold;
+}
 .slide-wrapper {
   overflow: hidden;
   /* position: relative; */
