@@ -14,56 +14,61 @@ const available_keywords = [
   "dhadak",
   "dil bechara",
   "dunki",
-  
 ];
 const input = document.getElementById("input");
 const resultBox = document.querySelector(".resultBox");
 
 input.addEventListener("keyup", function () {
-  
   let inputValue = input.value.toLowerCase();
- 
-    
-    let keywordResult = available_keywords.filter((keyword) => {
-      return keyword.toLowerCase().includes(inputValue);
-    });
-  
 
-    let singerResult = available_singers.filter(singer => {
-      return singer.name.toLowerCase().includes(inputValue);
-    })
-  
- 
-  display(keywordResult , singerResult)
+  let keywordResult = available_keywords.filter((keyword) => {
+    return keyword.toLowerCase().includes(inputValue);
+  });
+
+  let singerResult = available_singers.filter((singer) => {
+    return singer.name.toLowerCase().includes(inputValue);
+  });
+
+  let albumResult = popularAlbums.filter((album) => {
+    return album.name.toLowerCase().includes(inputValue);
+  });
+
+  display(keywordResult, singerResult, albumResult);
 });
 
-function display(keywords,singerss) {
-  
-     let keywordHtml = keywords.map((item) => {
-         return "<li onclick = selectItem(this)>" + item + "</li>";
-       })
-       .join("");
+function display(keywords, singerss, albums) {
+  let keywordHtml = keywords
+    .map((item) => {
+      return "<li onclick = selectItem(this)>" + item + "</li>";
+    })
+    .join("");
 
-  let singerHtml = singerss.map(singer => {
-   
-    return "<li onclick=selectItem(this)>" + singer.name + "</li>";
-  }).join();
+  let singerHtml = singerss
+    .map((singer) => {
+      return "<li onclick=selectItem(this)>" + singer.name + "</li>";
+    })
+    .join();
+
+  let albumHtml = albums
+    .map((album) => {
+      return "<li onclick=selectItem(this)>" + album.name + "</li>";
+    })
+    .join();
+
   resultBox.innerHTML = `
     <ul>
       ${keywordHtml}
       ${singerHtml}
+      ${albumHtml}
     </ul>
   `;
 }
 
 function selectItem(list) {
-
   input.value = list.innerHTML;
 }
 
 //singers display
-
-
 
 // songs display
 
@@ -100,8 +105,8 @@ function renderSongs(data) {
                  <img src="${song.img}" alt="kalank">
                </div>
                <div class="image_detail">
-                 <h4>"${song.title}"</h4>
-                 <p>"${song.artist}"</p>
+                 <h4>${song.title}</h4>
+                 <p>${song.artist}</p>
                  <a href="#">
                    <i class="fa-solid fa-play" onclick="openPop('${song.img}')"></i>
                  </a>
@@ -111,8 +116,8 @@ function renderSongs(data) {
   });
 }
 renderSongs(songs);
-const songTitle = document.getElementById('song_title');
-const right = document.querySelector('.right');
+const songTitle = document.getElementById("song_title");
+const right = document.querySelector(".right");
 
 input.addEventListener("keyup", function () {
   let filtered = [];
@@ -121,26 +126,24 @@ input.addEventListener("keyup", function () {
     renderSongs(songs);
     return;
   }
-    filtered = songs.filter((song) => {
-      return song.title.toLowerCase().includes(input_value);
-    });
-  
+  filtered = songs.filter((song) => {
+    return song.title.toLowerCase().includes(input_value);
+  });
+
   if (filtered.length > 0) {
-     renderSongs(filtered);
+    renderSongs(filtered);
   } else {
-    
     renderSongs([]);
-   
-   }
+  }
 });
 
 // render singers
-const sliders = document.querySelector('.sliders');
+const sliders = document.querySelector(".sliders");
 
-function renderSingers(available_singers){
-  sliders.innerHTML = '';
+function renderSingers(available_singers) {
+  sliders.innerHTML = "";
   available_singers.forEach((singer) => {
-       sliders.innerHTML += `<div class="singer">
+    sliders.innerHTML += `<div class="singer">
               <img src="${singer.img}" alt="">
               <div class="singer_detail">
                 <h4>${singer.name}</h4>
@@ -151,11 +154,11 @@ function renderSingers(available_singers){
               </div>
 
             </div>`;
-  })
+  });
 }
 renderSingers(available_singers);
 
-input.addEventListener('keyup', function() {
+input.addEventListener("keyup", function () {
   let filtered_singers = [];
   let input_value = input.value.toLowerCase();
   if (input_value === "") {
@@ -170,8 +173,7 @@ input.addEventListener('keyup', function() {
   } else {
     renderSingers([]);
   }
-  
-})
+});
 
 // popupjs
 
@@ -215,37 +217,111 @@ function showToast(message) {
 
 // toggle
 
-
-const sideBox = document.querySelector('.side-box');
-const icon = document.getElementById('icon')
+const sideBox = document.querySelector(".side-box");
+const icon = document.getElementById("icon");
 function toggleEvent(event) {
- sideBox.classList.toggle("hidden");
-  if (!sideBox.classList.contains('hidden')) {
-      icon.style.transform = "rotate(45deg)";
-      icon.style.transition = "0.4s ease";
+  sideBox.classList.toggle("hidden");
+  if (!sideBox.classList.contains("hidden")) {
+    icon.style.transform = "rotate(45deg)";
+    icon.style.transition = "0.4s ease";
   } else {
-     icon.style.transform = "rotate(0)";
-     icon.style.transition = "0.4s ease";
+    icon.style.transform = "rotate(0)";
+    icon.style.transition = "0.4s ease";
   }
-    
 }
-document.addEventListener('click', function (e) {
- if (!sideBox.contains(e.target) && !icon.contains(e.target)) {
-   sideBox.classList.add("hidden");
-   icon.style.transform = "rotate(0deg)";
- }
-})
+document.addEventListener("click", function (e) {
+  if (!sideBox.contains(e.target) && !icon.contains(e.target)) {
+    sideBox.classList.add("hidden");
+    icon.style.transform = "rotate(0deg)";
+  }
+});
 
 //for create playlist
-const play = document.getElementById('play');
-const message = document.querySelector('.message')
+const play = document.getElementById("play");
+const message = document.querySelector(".message");
 function togglePlay(event) {
   event.stopPropagation();
-  message.classList.toggle('hidden');
+  message.classList.toggle("hidden");
 }
-document.addEventListener('click', function (e) {
+document.addEventListener("click", function (e) {
   if (!message.contains(e.target)) {
-    message.classList.add('hidden');
-    }
-})
-  
+    message.classList.add("hidden");
+  }
+});
+
+// popular albums and songs js rendering
+const popularAlbums = [
+  {
+    name: "Hurry up tomorrow",
+    genre: "The Weekend",
+    img: "images/hurryup.jfif",
+  },
+  {
+    name: "Havana",
+    genre: "Camilo Cabello",
+    img: "images/havana.jfif",
+  },
+  {
+    name: "jhol",
+    genre: "Maanu",
+    img: "images/jhol.jfif",
+  },
+  {
+    name: "reputation",
+    genre: "quantifier",
+    img: "images/reputation.jfif",
+  },
+  {
+    name: "sahiba",
+    genre: "Abhinesh",
+    img: "images/Sahiba.jfif",
+  },
+  {
+    name: "Finding her",
+    genre: "Taylor",
+    img: "images/finding her.jfif",
+  },
+  {
+    name: "Duroon",
+    genre: "arijiy",
+    img: "images/duroon.jfif",
+  },
+];
+const album = document.getElementById("album");
+function renderAlbum(popularAlbums) {
+  album.innerHTML = "";
+  popularAlbums.forEach((data) => {
+    album.innerHTML += `
+       <div class="cards">
+              <div class="image">
+                <img src='${data.img}' alt="">
+              </div>
+              <div class="image_detail">
+                <h4>${data.name}</h4>
+                <p>${data.genre}</p>
+                <a href="#">
+                  <i class="fa-solid fa-play" onclick="openPop('${data.img}')"></i>
+                </a>
+              </div>
+            </div>
+     `;
+  });
+}
+renderAlbum(popularAlbums);
+input.addEventListener("keyup", function () {
+  let inputValue = input.value.toLowerCase();
+  let filtered = [];
+  if (inputValue === "") {
+    renderAlbum(popularAlbums);
+    return;
+  }
+  filtered = popularAlbums.filter((album) => {
+    return album.name.toLowerCase().includes(inputValue);
+  });
+  if (filtered.length > 0) {
+    renderAlbum(filtered);
+    return;
+  } else {
+    renderAlbum([]);
+  }
+});

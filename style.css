@@ -122,7 +122,7 @@ header {
   align-items: center;
   padding: 10px 0px;
 }
- .create .side-box {
+.create .side-box {
   background-color: #1f1f1f;
   border-radius: 10px;
   position: absolute;
@@ -140,7 +140,7 @@ header {
   font-size: 12px;
   font-weight: bold;
   color: gray;
-} 
+}
 .card-1 {
   padding: 20px 10px;
   border-radius: 25px;
@@ -171,7 +171,6 @@ header {
   position: absolute;
   top: 40px;
   left: 100%;
-  
 }
 .card-1 .message::before {
   content: "";
@@ -216,7 +215,7 @@ header {
   font-size: 20px;
   font-weight: bold;
 }
-.right p{
+.right p {
   font-size: 20px;
   font-weight: bold;
 }
