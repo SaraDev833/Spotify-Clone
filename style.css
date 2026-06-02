@@ -4,6 +4,15 @@
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+html,
+body {
+  overflow-x: hidden;
+ 
+}
+img {
+  max-width: 100%;
+  display: block;
+}
 .container {
   max-width: 1300px;
   margin: 0 auto;
@@ -24,7 +33,7 @@ header {
 }
 .search-box {
   position: relative;
-  width: 300px;
+width: min(300px, 100%);
 }
 .search-box input {
   border-radius: 25px;
@@ -88,7 +97,8 @@ header {
   align-items: center;
 }
 .left {
-  height: 100vh;
+   height: auto;
+  min-height: 100vh;
   width: 25vw;
   padding: 20px 10px;
   border-radius: 25px;
@@ -129,6 +139,10 @@ header {
   left: 60px;
   top: 10px;
   z-index: 9999;
+}
+.side-menu-list {
+  width: 100%;
+  padding: 0 10px;
 }
 .create .side-box ul li h4 {
   font-size: 18px;
@@ -236,6 +250,7 @@ header {
   display: none;
 }
 .cards {
+    width: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -330,7 +345,8 @@ header {
 }
 .singer {
   height: 240px;
-  min-width: 220px;
+  width: 180px;
+  min-width: 180px;
   padding: 0 10px;
   position: relative;
   z-index: 2;
@@ -398,8 +414,8 @@ header {
 
 /* popup */
 .popup {
-  height: 350px;
-  width: 550px;
+    width: 90%;
+  max-width: 550px;
   background: linear-gradient(to bottom, #2d2d2d 0%, #1f1f1f 35%, #121212 100%);
   position: fixed;
   z-index: 20;
@@ -515,7 +531,7 @@ header {
   display: block;
 
 }
-@media(max-width:880px)  {
+/* @media(max-width:880px)  {
   header{
     position: relative;
   }
@@ -579,4 +595,143 @@ header .login {
   
   right: 20px;
 }
+} */
+@media (max-width: 900px) {
+
+  /* STACK LAYOUT */
+  .content {
+    flex-direction: column;
+      padding: 10px 0;
+    gap: 15px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    height: auto;
+      border-radius: 15px;
+  }
+.container{
+   padding: 0 12px;
 }
+  .right {
+    padding: 15px;
+  }
+
+  .homeIcon{
+    display: none;
+  }
+  /* LEFT BELOW RIGHT (Spotify feel) */
+  .left {
+    order: 2;
+    padding: 10px;
+  }
+
+  .right {
+    order: 1;
+  }
+
+  /* HEADER FIX */
+  header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .logo,
+  .menu,
+  .login {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  /* SIDE BOX FIX */
+  .create .side-box {
+    width: min(260px, 90vw);
+    right: 0;
+    left: auto;
+    top: 55px;
+  }
+
+  .create .side-box ul li {
+    gap: 10px;
+    padding: 8px;
+  }
+
+  .create .side-box ul li h4 {
+    font-size: 14px;
+  }
+
+  .create .side-box ul li p {
+    font-size: 11px;
+  }
+
+  /* PLAYLIST MESSAGE FIX */
+  .card-1 .message {
+    left: 0;
+    top: 110%;
+    width: 100%;
+  }
+
+  /* FOOTER FIX */
+  .footer-left {
+    position: static;
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+
+  .cards {
+    width: 150px;
+    height: 200px;
+  }
+
+  .singer {
+    width: 150px;
+    min-width: 150px;
+  }
+
+  .singer img {
+    width: 130px;
+    height: 130px;
+  }
+}
+@media (max-width: 600px) {
+
+  /* POPUP FIX */
+  .popup {
+    flex-direction: column;
+    width: 95%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .popup_left {
+    display: none;
+  }
+
+  .popup_right {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* TOAST FIX */
+  .toast {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) translateY(100px);
+    width: 90%;
+    text-align: center;
+  }
+
+  .toast.show {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+

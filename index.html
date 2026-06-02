@@ -13,10 +13,10 @@
 <body style="background-color: black">
   <div class="container">
     <header class="flex justify-between">
-      <div class="logo flex align-center">
+      <a href="index.html" class="logo flex align-center" style="cursor: pointer; text-decoration: none;" onclick="window.scrollTo(0,0)">
         <i class="fa-brands fa-spotify"></i>
         <h4 style="font-size: 20px; color: white; font-weight: bold; margin-left: 5px;">Spotify</h4>
-      </div>
+      </a>
       <div class="navbar-toggle">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -24,9 +24,7 @@
       </div>
       <div class="sidebar">
       <div class="menu flex align-center">
-        <div class="homeIcon">
-          <i class="fa-solid fa-house" style="color: white; font-size: 20px"></i>
-        </div>
+      
         <div class="search-box">
           <input type="text" class="softer-dark-gray" placeholder="What do you want to play?" id="input" />
           <i class="fa-solid fa-magnifying-glass" style="color: gray"></i>
@@ -48,7 +46,7 @@
           <div class="create">
             <i  onclick="toggleEvent(event)"  class="fa-solid fa-plus" id="icon"></i>
             <div class="side-box hidden" >
-              <ul style="width: 300px; padding: 0px 10px">
+              <ul class="side-menu-list">
                 <li style="border-bottom: 1px solid #2f2e2e">
                   <i class="fa-solid fa-music"></i>
                   <span>
